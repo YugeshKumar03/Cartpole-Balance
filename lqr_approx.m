@@ -29,10 +29,10 @@ Q_m = [1 0 0 0;
        0 0 0 1];
 R = 0.01;
 
-n = 20;
-t_sim = linspace(0, n, 20*n+1)'; % Simulation Time
+n = 10;
+t_sim = linspace(0, n, 10*n+1)'; % Simulation Time
 
-x_i = [0; 0; 5*pi/18; 0]; % Initial conditions on state vector
+x_i = [0; 0; 20*pi/180; 0]; % Initial conditions on state vector
 x_ref = [0; 0; 0; 0]; % Equilibrium position
 
 % Finding the matrix K_m which minimizes the defined weight function
@@ -60,3 +60,4 @@ X_f = real(X_f);
 % plot(t_sim, -K_m*X_f');
 
 CtP_render(t_sim, X_f, m, M, l);
+
